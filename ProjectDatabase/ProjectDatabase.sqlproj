@@ -61,4 +61,7 @@
     <Build Include="Person.sql" />
     <Build Include="Address.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ProjectDatabase.publish.xml" />
+  </ItemGroup>
 </Project>
