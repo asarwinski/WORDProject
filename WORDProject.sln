@@ -7,6 +7,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProjectDatabase", "ProjectD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WORDProjectUI", "ProjectApp\WORDProjectUI\WORDProjectUI.csproj", "{816759DD-5F57-4B8C-A6CB-5F94F2956289}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WORDProjectClassLib", "ProjectApp\WORDProjectClassLib\WORDProjectClassLib.csproj", "{9FA8BBDB-AD27-41AE-B0A6-D8581B195C12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{816759DD-5F57-4B8C-A6CB-5F94F2956289}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{816759DD-5F57-4B8C-A6CB-5F94F2956289}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{816759DD-5F57-4B8C-A6CB-5F94F2956289}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FA8BBDB-AD27-41AE-B0A6-D8581B195C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FA8BBDB-AD27-41AE-B0A6-D8581B195C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FA8BBDB-AD27-41AE-B0A6-D8581B195C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FA8BBDB-AD27-41AE-B0A6-D8581B195C12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
