@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
             this.LoginTextBox = new System.Windows.Forms.TextBox();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.LoginLabel = new System.Windows.Forms.Label();
@@ -41,14 +40,14 @@
             // 
             // LoginTextBox
             // 
-            this.LoginTextBox.Location = new System.Drawing.Point(132, 167);
+            this.LoginTextBox.Location = new System.Drawing.Point(136, 174);
             this.LoginTextBox.Name = "LoginTextBox";
             this.LoginTextBox.Size = new System.Drawing.Size(123, 20);
             this.LoginTextBox.TabIndex = 0;
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(132, 206);
+            this.PasswordTextBox.Location = new System.Drawing.Point(136, 223);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(123, 20);
             this.PasswordTextBox.TabIndex = 0;
@@ -56,7 +55,7 @@
             // LoginLabel
             // 
             this.LoginLabel.AutoSize = true;
-            this.LoginLabel.Location = new System.Drawing.Point(129, 151);
+            this.LoginLabel.Location = new System.Drawing.Point(133, 153);
             this.LoginLabel.Name = "LoginLabel";
             this.LoginLabel.Size = new System.Drawing.Size(36, 13);
             this.LoginLabel.TabIndex = 1;
@@ -65,7 +64,7 @@
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Location = new System.Drawing.Point(129, 190);
+            this.PasswordLabel.Location = new System.Drawing.Point(133, 202);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(56, 13);
             this.PasswordLabel.TabIndex = 1;
@@ -73,7 +72,7 @@
             // 
             // LoginButton
             // 
-            this.LoginButton.Location = new System.Drawing.Point(153, 257);
+            this.LoginButton.Location = new System.Drawing.Point(160, 272);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(75, 23);
             this.LoginButton.TabIndex = 2;
@@ -84,7 +83,7 @@
             // 
             this.IncorectLabel.AutoSize = true;
             this.IncorectLabel.ForeColor = System.Drawing.Color.Red;
-            this.IncorectLabel.Location = new System.Drawing.Point(129, 235);
+            this.IncorectLabel.Location = new System.Drawing.Point(132, 251);
             this.IncorectLabel.Name = "IncorectLabel";
             this.IncorectLabel.Size = new System.Drawing.Size(131, 13);
             this.IncorectLabel.TabIndex = 3;
@@ -92,15 +91,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.ImageLocation = "Images/";
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(126, 12);
+            this.pictureBox1.Image = global::WORDProjectUI.Properties.Resources.L;
+            this.pictureBox1.Location = new System.Drawing.Point(136, 36);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 117);
+            this.pictureBox1.Size = new System.Drawing.Size(123, 109);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // LoginPage
             // 
