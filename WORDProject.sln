@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProjectDatabase", "ProjectDatabase\ProjectDatabase.sqlproj", "{93B0F08B-50B2-4A7E-882A-C43B5C30FE88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WORDProjectUI", "ProjectApp\WORDProjectUI\WORDProjectUI.csproj", "{816759DD-5F57-4B8C-A6CB-5F94F2956289}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WORDProjectClassLib", "ProjectApp\WORDProjectClassLib\WORDProjectClassLib.csproj", "{9FA8BBDB-AD27-41AE-B0A6-D8581B195C12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WORDProjectUI", "ProjectApp\WORDProjectUI\WORDProjectUI.csproj", "{7E285E92-E30A-4F83-97DC-8ED51D024205}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +21,14 @@ Global
 		{93B0F08B-50B2-4A7E-882A-C43B5C30FE88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93B0F08B-50B2-4A7E-882A-C43B5C30FE88}.Release|Any CPU.Build.0 = Release|Any CPU
 		{93B0F08B-50B2-4A7E-882A-C43B5C30FE88}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{816759DD-5F57-4B8C-A6CB-5F94F2956289}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{816759DD-5F57-4B8C-A6CB-5F94F2956289}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{816759DD-5F57-4B8C-A6CB-5F94F2956289}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{816759DD-5F57-4B8C-A6CB-5F94F2956289}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9FA8BBDB-AD27-41AE-B0A6-D8581B195C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9FA8BBDB-AD27-41AE-B0A6-D8581B195C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FA8BBDB-AD27-41AE-B0A6-D8581B195C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FA8BBDB-AD27-41AE-B0A6-D8581B195C12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E285E92-E30A-4F83-97DC-8ED51D024205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E285E92-E30A-4F83-97DC-8ED51D024205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E285E92-E30A-4F83-97DC-8ED51D024205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E285E92-E30A-4F83-97DC-8ED51D024205}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
