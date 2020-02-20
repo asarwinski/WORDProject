@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Addresses]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [City] NVARCHAR(50) NOT NULL, 
+    [State] NVARCHAR(50) NOT NULL, 
+    [Country] NVARCHAR(50) NOT NULL, 
+    [Zipcode] NVARCHAR(50) NOT NULL
+)

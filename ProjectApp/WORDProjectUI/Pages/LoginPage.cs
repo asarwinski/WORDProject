@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace WORDProjectUI
 {
-    public partial class Form1 : Form
+    public partial class LoginPage : Form
     {
-        public Form1()
+        public LoginPage()
         {
             InitializeComponent();
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
