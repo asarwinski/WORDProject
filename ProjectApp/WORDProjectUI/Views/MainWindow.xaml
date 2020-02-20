@@ -6,7 +6,17 @@
         xmlns:local="clr-namespace:WORDProjectUI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="#FF75C1C9">
+        <TabControl x:Name="TabControl" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="772" TabStripPlacement="Left" Background="#FF9E2F2F">
+            <TabItem x:Name="PlannedExams" Background="#FFE64444">
+                <TabItem.Header>
+                    <Image Width="50" Source="/Images/calendar.png" OpacityMask="#FFEE2A2A"/>
+                </TabItem.Header>
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="TabItem" Background="#FFDA3232">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
