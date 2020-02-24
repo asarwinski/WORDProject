@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WORDProjectUI"
+        xmlns:tabs="clr-namespace:WORDProjectUI.Views.Tabs"
         mc:Ignorable="d"
         Style="{DynamicResource Dark}"
         Title="MainWindow" Height="450" Width="800">
@@ -23,38 +24,19 @@
                 <TabItem.Header>
                     <Image Width="50" Source="/Images/calendar.png"/>
                 </TabItem.Header>
-                <Grid Background="#FF7A7A7A">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="20"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="20"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="20"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="20"/>
-                    </Grid.RowDefinitions>
-                    <DataGrid Grid.Column="1" Grid.Row="1" x:Name="PlannedExamsDataGrid">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="Examinee" Width="2*"/>
-                            <DataGridTextColumn Header="Examiner" Width="2*"/>
-                            <DataGridTextColumn Header="Category" Width="1*"/>
-                            <DataGridTextColumn Header="Date" Width="2*"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                </Grid>
+                <tabs:PlannedExamsTab Background="{StaticResource TabBG}"/>
             </TabItem>
             <TabItem x:Name="ExamsHistory">
                 <TabItem.Header>
                     <Image Width="50" Source="/Images/history.png"/>
                 </TabItem.Header>
-                <Grid Background="#FF7A7A7A"/>
+                <tabs:ExamsHistoryTab Background="{StaticResource TabBG}"/>
             </TabItem>
             <TabItem x:Name="Examiners">
                 <TabItem.Header>
                     <Image Width="50" Source="/Images/teacher.png"/>
                 </TabItem.Header>
-                <Grid Background="#FF7A7A7A"/>
+                <tabs:ExaminersTab Background="{StaticResource TabBG}"/>
             </TabItem>
             <TabItem x:Name="Examinees">
                 <TabItem.Header>

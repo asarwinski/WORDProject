@@ -5,6 +5,7 @@
              StartupUri="Views/MainView.xaml">
     <Application.Resources>
         <ResourceDictionary>
+            <SolidColorBrush x:Key="TabBG" Color="#FF7A7A7A"/>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Styles/ButtonStyle.xaml"/>
                 <ResourceDictionary Source="/Styles/WindowStyle.xaml"/>

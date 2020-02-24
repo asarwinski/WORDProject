@@ -55,6 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\Tabs\ExaminersTab.xaml.cs">
+      <DependentUpon>ExaminersTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabs\ExamsHistoryTab.xaml.cs">
+      <DependentUpon>ExamsHistoryTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabs\PlannedExamsTab.xaml.cs">
+      <DependentUpon>PlannedExamsTab.xaml</DependentUpon>
+    </Compile>
     <Page Include="Styles\ButtonStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,6 +108,18 @@
       <DependentUpon>MainView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Tabs\ExaminersTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Tabs\ExamsHistoryTab.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Tabs\PlannedExamsTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
