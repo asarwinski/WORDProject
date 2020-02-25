@@ -12,19 +12,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Threading;
 
 namespace WORDProjectUI.Views.Tabs
 {
     /// <summary>
-    /// Interaction logic for ExaminersTab.xaml
+    /// Interaction logic for ExamineesTab.xaml
     /// </summary>
-    public partial class ExaminersTab : UserControl
+    public partial class ExamineesTab : UserControl
     {
-        public ExaminersTab()
+        public ExamineesTab()
         {
             InitializeComponent();
-            Loaded += new RoutedEventHandler(BirthDateFilter_Loaded);
+            Loaded += ExamineesTab_Loaded;
+        }
+
+        private void ExamineesTab_Loaded(object sender, RoutedEventArgs e)
+        {
+            BirthDateFilter.DisplayMode = CalendarMode.Month;
+            BirthDateFilter.DisplayMode = CalendarMode.Year;
         }
 
         private void BirthDateFilter_DisplayModeChanged(object sender, CalendarModeChangedEventArgs e)
@@ -33,12 +38,6 @@ namespace WORDProjectUI.Views.Tabs
             {
                 BirthDateFilter.DisplayMode = CalendarMode.Year;
             }
-        }
-
-        private void BirthDateFilter_Loaded(object sender, RoutedEventArgs e)
-        {
-            BirthDateFilter.DisplayMode = CalendarMode.Month;
-            BirthDateFilter.DisplayMode = CalendarMode.Year;
         }
     }
 }

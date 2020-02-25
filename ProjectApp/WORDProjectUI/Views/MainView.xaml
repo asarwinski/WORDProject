@@ -7,7 +7,7 @@
         xmlns:tabs="clr-namespace:WORDProjectUI.Views.Tabs"
         mc:Ignorable="d"
         Style="{DynamicResource Dark}"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="525" Width="1050">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -38,11 +38,17 @@
                 </TabItem.Header>
                 <tabs:ExaminersTab Background="{StaticResource TabBG}"/>
             </TabItem>
+            <TabItem x:Name="AddExaminers">
+                <TabItem.Header>
+                    <Image Width="50" Source="/Images/addTeacher.png"/>
+                </TabItem.Header>
+                <tabs:AddExaminersTab Background="{StaticResource TabBG}"/>
+            </TabItem>
             <TabItem x:Name="Examinees">
                 <TabItem.Header>
                     <Image Width="50" Source="/Images/student.png"/>
                 </TabItem.Header>
-                <Grid Background="#FF7A7A7A"/>
+                <tabs:ExamineesTab Background="{StaticResource TabBG}"/>
             </TabItem>
             <TabItem x:Name="AddExam">
                 <TabItem.Header>

@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Views\Tabs\AddExaminersTab.xaml.cs">
+      <DependentUpon>AddExaminersTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabs\ExamineesTab.xaml.cs">
+      <DependentUpon>ExamineesTab.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Tabs\ExaminersTab.xaml.cs">
       <DependentUpon>ExaminersTab.xaml</DependentUpon>
     </Compile>
@@ -108,6 +114,14 @@
       <DependentUpon>MainView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\Tabs\AddExaminersTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Tabs\ExamineesTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Tabs\ExaminersTab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -158,6 +172,11 @@
   <ItemGroup>
     <Resource Include="Images\L.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\wordLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\addTeacher.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
