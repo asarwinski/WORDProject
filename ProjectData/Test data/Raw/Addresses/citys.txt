@@ -1,19 +1,19 @@
-S³upsk 76-200
-Miastko 77-200
-Kobylnica 76-252
-Dêbnica Kaszubska 76-248
-Redzikowo 76-250
-Dretyñ 77-203	
-Trzebielino 77-240
-Ustka 76-270
-Kwakowo 77-252
-Kruszyna 76-251
-Zieliñ 77-235	
-Bo¿anka 77-204
-Ko³czyg³owy 77-140
-Koœcierzyna 83-400
-Bytów 77-100
-Siemianice 76-216
-Kêpice 77-230
-Katowice 40-000
-Warszawy 00-007
+SÅ‚upsk 76-200 Pomorskie
+Miastko 77-200 Pomorskie
+Kobylnica 76-252 Pomorskie
+DÄ™bnica Kaszubska 76-248 Pomorskie
+Redzikowo 76-250 Pomorskie
+DretyÅ„ 77-203	Pomorskie
+Trzebielino 77-240 Pomorskie
+Ustka 76-270 Pomorskie
+Kwakowo 77-252 Pomorskie
+Kruszyna 76-251 Pomorskie
+ZieliÅ„ 77-235	Pomorskie
+BoÅ¼anka 77-204 Pomorskie
+KoÅ‚czygÅ‚owy 77-140 Pomorskie
+KoÅ›cierzyna 83-400 Pomorskie
+BytÃ³w 77-100 Pomorskie
+Siemianice 76-216 Pomorskie
+KÄ™pice 77-230 Pomorskie
+Katowice 40-000 ÅšlÄ…skie
+Warszawy 00-007 Mazowieckie
