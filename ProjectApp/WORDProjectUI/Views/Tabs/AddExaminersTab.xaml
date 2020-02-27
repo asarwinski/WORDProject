@@ -7,6 +7,36 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="1" Text="Add Examiner" HorizontalAlignment="Center" FontSize="40"/>
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" Text="Personal Details" FontSize="20"/>
+        <TextBlock Grid.Column="1" Grid.Row="4" Text="Name:"/>
+        <TextBox x:Name="ExaminerName" Grid.Column="2" Grid.Row="4" MinWidth="75"/>
+        <TextBlock Grid.Column="1" Grid.Row="5" Text="Surname:"/>
+        <TextBox x:Name="ExaminerSurname" Grid.Column="2" Grid.Row="5" MinWidth="75"/>
+        <TextBlock Grid.Column="1" Grid.Row="6" Text="Surname:"/>
+        <TextBox x:Name="ExaminerPesel" Grid.Column="2" Grid.Row="6" MinWidth="75"/>
+        <TextBlock Grid.Column="1" Grid.Row="7" Text="BirthDate:"/>
+        <DatePicker x:Name="ExaminerBirthDate" Grid.Column="2" Grid.Row="7"/>
+
     </Grid>
 </UserControl>
