@@ -9,10 +9,13 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
@@ -24,19 +27,50 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="1" Text="Add Examiner" HorizontalAlignment="Center" FontSize="40"/>
-        <TextBlock Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" Text="Personal Details" FontSize="20"/>
-        <TextBlock Grid.Column="1" Grid.Row="4" Text="Name:"/>
-        <TextBox x:Name="ExaminerName" Grid.Column="2" Grid.Row="4" MinWidth="75"/>
-        <TextBlock Grid.Column="1" Grid.Row="5" Text="Surname:"/>
-        <TextBox x:Name="ExaminerSurname" Grid.Column="2" Grid.Row="5" MinWidth="75"/>
-        <TextBlock Grid.Column="1" Grid.Row="6" Text="Surname:"/>
-        <TextBox x:Name="ExaminerPesel" Grid.Column="2" Grid.Row="6" MinWidth="75"/>
-        <TextBlock Grid.Column="1" Grid.Row="7" Text="BirthDate:"/>
-        <DatePicker x:Name="ExaminerBirthDate" Grid.Column="2" Grid.Row="7"/>
+        <TextBlock Grid.Column="2" Grid.ColumnSpan="5" Grid.Row="1" Text="Add Examiner" HorizontalAlignment="Center" FontSize="40"/>
+        
+        
+        <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3" Text="Personal Details" FontSize="20" HorizontalAlignment="Center"/>
+        
+        <TextBlock Grid.Column="2" Grid.Row="4" Text="Name:" Margin="0,5"/>
+        <TextBox x:Name="ExaminerName" Grid.Column="3" Grid.Row="4" MinWidth="115" Margin="0,5"/>
+        
+        <TextBlock Grid.Column="2" Grid.Row="5" Text="Surname:" Margin="0,5"/>
+        <TextBox x:Name="ExaminerSurname" Grid.Column="3" Grid.Row="5" MinWidth="115" Margin="0,5"/>
+        
+        <TextBlock Grid.Column="2" Grid.Row="6" Text="Surname:" Margin="0,5"/>
+        <TextBox x:Name="ExaminerPesel" Grid.Column="3" Grid.Row="6" MinWidth="115" Margin="0,5"/>
+        
+        <TextBlock Grid.Column="2" Grid.Row="7" Text="BirthDate:" Margin="0,5"/>
+        <DatePicker x:Name="ExaminerBirthDate" Grid.Column="3" Grid.Row="7" Margin="5,5" BorderBrush="{x:Null}"/>
+        
+        
+        <Path  Grid.Column="4" Grid.Row="3" Grid.RowSpan="5" Stroke="Black" StrokeThickness="1" Stretch="Fill" Margin="20,0">
+            <Path.Data>
+                <LineGeometry StartPoint="0,0" EndPoint="0,1" />
+            </Path.Data>
+        </Path>
 
+
+        <TextBlock Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="3" Text="Address Details" FontSize="20" HorizontalAlignment="Center"/>
+        
+        <TextBlock Grid.Column="5" Grid.Row="4" Text="City:" Margin="0,5"/>
+        <TextBox x:Name="ExaminerCity" Grid.Column="6" Grid.Row="4" MinWidth="115" Margin="0,5"/>
+
+        <TextBlock Grid.Column="5" Grid.Row="5" Text="State:" Margin="0,5"/>
+        <TextBox x:Name="ExaminerState" Grid.Column="6" Grid.Row="5" MinWidth="115" Margin="0,5"/>
+
+        <TextBlock Grid.Column="5" Grid.Row="6" Text="Zip Code:" Margin="0,5"/>
+        <TextBox x:Name="ExaminerZipCode" Grid.Column="6" Grid.Row="6" MinWidth="115" Margin="0,5"/>
+
+        <TextBlock Grid.Column="5" Grid.Row="7" Text="Country:" Margin="0,5"/>
+        <TextBox x:Name="ExaminerCountry" Grid.Column="6" Grid.Row="7" MinWidth="115" Margin="0,5"/>
+
+
+        <Button Grid.Column="2" Grid.ColumnSpan="5" Grid.Row="8" HorizontalAlignment="Center" Content="Add" Padding="30,4" Margin="10"/>
     </Grid>
 </UserControl>
