@@ -3,6 +3,7 @@
 	[Id] INT NOT NULL PRIMARY KEY, 
     [Examinee_Id] INT NOT NULL, 
     [Examiner_Id] INT NOT NULL, 
+    [Category] VARCHAR(10) NOT NULL,
     [Date] DATETIME NOT NULL, 
     [Result] BIT NULL, 
     [Duration] TIME NULL, 

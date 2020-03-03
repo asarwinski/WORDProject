@@ -57,10 +57,13 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
-    <Folder Include="AddInitialValues" />
+    <Folder Include="InitialValues" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ProjectDatabase.publish.xml" />
+    <None Include="InitialValues\AddExaminees.sql" />
+    <None Include="InitialValues\AddExaminers.sql" />
+    <None Include="InitialValues\AddPermissions.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Examinees.sql" />
@@ -69,11 +72,12 @@
     <Build Include="Tables\Permissions.sql" />
     <Build Include="Tables\Exams.sql" />
     <Build Include="Tables\Passwords.sql" />
+    <None Include="InitialValues\AddAddresses.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ProjectDatabase.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <PostDeploy Include="AddInitialValues\AddExaminees.sql" />
+    <PostDeploy Include="PostDeployment.sql" />
   </ItemGroup>
 </Project>

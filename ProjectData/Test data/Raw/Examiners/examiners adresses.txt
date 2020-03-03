@@ -1,10 +1,10 @@
-S³upsk 76-200 Pomorskie
-Miastko 77-200 Pomorskie
-S³upsk 76-200 Pomorskie
-Kobylnica 76-252 Pomorskie
-S³upsk 76-200 Pomorskie
-Kobylnica 76-252 Pomorskie
-Dêbnica Kaszubska 76-248 Pomorskie
-Redzikowo 76-250 Pomorskie
-Dêbnica Kaszubska 76-248 Pomorskie
-S³upsk 76-200 Pomorskie
+('Sï¿½upsk', 'Pomorskie', 'Polska', '76-200'),
+('Miastko', 'Pomorskie', 'Polska', '77-200'),
+('Sï¿½upsk', 'Pomorskie', 'Polska', '76-200'),
+('Kobylnica', 'Pomorskie', 'Polska', '76-252'),
+('Sï¿½upsk', 'Pomorskie', 'Polska', '76-200'),
+('Kobylnica','Pomorskie', 'Polska', '76-252'),
+('Dï¿½bnica Kaszubska', 'Pomorskie', 'Polska', '76-248'),
+('Redzikowo', 'Pomorskie', 'Polska', '76-250'),
+('Dï¿½bnica Kaszubska', 'Pomorskie', 'Polska', '76-248'),
+('Sï¿½upsk', 'Pomorskie', 'Polska', '76-200'),

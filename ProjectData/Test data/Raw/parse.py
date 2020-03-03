@@ -1,25 +1,16 @@
-from random import randint
-if __name__ == "__main__":
-    citys = []
-    zipcodes = []
-    states = []
-    country = []
+examiner = list(range(1,11))
+categories = []
 
-    infos = None
-
-    with open('citys.txt', 'r') as reader:
-        lines = reader.readlines()
-        for line in lines:
-            line = line.split(' ')
-            for _ in range(int(line[-1])):
-                citys.append(line[0])
-                zipcodes.append(line[1])
-                states.append(line[2])
-                country.append("Polska")
-        infos = list(zip(citys, states, country, zipcodes))
-    with open('parsed_addresses.txt', 'w') as writer:
-        writer.write('INSERT INTO dbo.Addresses (City, State, Country, Zipcode)\n')
-        writer.write('Values\n')
-        for _ in range(100):
-            city, state, country, zipcode = infos[randint(0, len(infos)-1)]
-            writer.write('(\'' + city + '\', \'' + state + '\', \'' + country + '\', \'' + zipcode + '\'),\n')
+with open('./Permissions/category.txt', 'r') as reader:
+    lines = reader.readlines()
+    for i in range(len(lines)):
+        line = lines[i].strip()
+        cats = line.split(' ')
+        for cat in cats:
+            categories.append((examiner[i], cat))
+    
+with open('permissions_parsed.txt', 'w') as writer:
+    writer.write('INSERT INTO dbo.Permissions (Examiner_Id, Category)\n')
+    writer.write('Values\n')
+    for i, c in categories:
+        writer.write('(' + str(i) + ', \'' + c +'\'),\n')

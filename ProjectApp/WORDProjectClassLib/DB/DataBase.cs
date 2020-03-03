@@ -26,22 +26,31 @@ namespace WORDProjectClassLib.DB
             throw new NotImplementedException();
         }
 
-        public List<Examinee> GetExaminees(string name = null, string surname = null, string category = null, string city = null, DateTime? birthDate = null)
+        public async Task<List<Examinee>> GetExaminees(string name = null, string surname = null, string category = null, string city = null, DateTime? birthDate = null)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionString))
             {
-                //string sql = "SELECT";
-                //connection.QueryAsync<Examinee, Address, Examinee>()
-                throw new NotImplementedException();
+                string sql = @"SELECT * 
+                               FROM [dbo].[Examinees] e
+                               INNER JOIN [dbo].[Addresses] a on e.Address_Id = a.Id";
+                var examinees = await connection.QueryAsync<Examinee, Address, Examinee>(sql,
+                (examinee, address) =>
+                {
+                    examinee.Address = address;
+                    return examinee;
+                },
+                splitOn: "Id");
+
+                return examinees.ToList();
             }
         }
 
-        public List<Examiner> GetExaminers(string name = null, string surname = null, string category = null, string city = null, DateTime? birthDate = null)
+        public Task<List<Examiner>> GetExaminers(string name = null, string surname = null, string category = null, string city = null, DateTime? birthDate = null)
         {
             throw new NotImplementedException();
         }
 
-        public List<Exam> GetExams(Examiner examiner = null, Examinee examinee = null, string category = null, DateTime? date = null, bool? result = null)
+        public Task<List<Exam>> GetExams(Examiner examiner = null, Examinee examinee = null, string category = null, DateTime? date = null, bool? result = null)
         {
             throw new NotImplementedException();
         }

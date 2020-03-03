@@ -1,0 +1,12 @@
+﻿INSERT INTO dbo.Examiners (Name, Surname, Pesel, BirthDate, Address_Id)
+Values
+('Julian', 'Dąbrowski', '96010968829', '1996-03-09', 101),
+('Bronisław', 'Wójcik', '68061181854', '1968-06-11', 102),
+('Radosław', 'Czarnecki', '75110682581', '1975-11-06', 103),
+('Mirosław', 'Urbańska', '98072299279', '1998-07-22', 104),
+('Korneliusz', 'Laskowski', '79092611269', '1979-09-26', 105),
+('Agata', 'Mróz', '93051453835', '1993-05-14', 106),
+('Klementyna', 'Lewandowska', '87041637552', '1987-04-16', 107),
+('Edyta', 'Wysocka', '89030369259', '1980-03-03', 108),
+('Balbina', 'Czarnecka', '67031865875', '1967-03-18', 109),
+('Barbara', 'Szewczyk', '68050248962', '1968-05-02', 110);

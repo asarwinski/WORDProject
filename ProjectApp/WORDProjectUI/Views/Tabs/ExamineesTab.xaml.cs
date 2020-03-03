@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WORDProjectUI.ViewModels;
 
 namespace WORDProjectUI.Views.Tabs
 {
@@ -23,6 +24,7 @@ namespace WORDProjectUI.Views.Tabs
         public ExamineesTab()
         {
             InitializeComponent();
+            DataContext = new ExamineesTabViewModel();
             Loaded += ExamineesTab_Loaded;
         }
 

@@ -39,6 +39,7 @@
       <HintPath>..\..\packages\Dapper.2.0.30\lib\net461\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +59,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Utils\ConnectionStringHelper.cs" />
+    <Compile Include="ViewModels\Tabs\ExamineesTabViewModel.cs" />
     <Compile Include="Views\Tabs\AddExaminersTab.xaml.cs">
       <DependentUpon>AddExaminersTab.xaml</DependentUpon>
     </Compile>
@@ -181,6 +184,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\addTeacher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WORDProjectClassLib\WORDProjectClassLib.csproj">
+      <Project>{9fa8bbdb-ad27-41ae-b0a6-d8581b195c12}</Project>
+      <Name>WORDProjectClassLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

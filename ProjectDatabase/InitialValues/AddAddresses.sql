@@ -1,4 +1,4 @@
-INSERT INTO dbo.Addresses (City, State, Country, Zipcode)
+﻿INSERT INTO dbo.Addresses (City, State, Country, Zipcode)
 VALUES
 ('Słupsk', 'Pomorskie', 'Polska', '76-200'),
 ('Słupsk', 'Pomorskie', 'Polska', '76-200'),
@@ -100,3 +100,13 @@ VALUES
 ('Bytów', 'Pomorskie', 'Polska', '77-100'),
 ('Bożanka', 'Pomorskie', 'Polska', '77-204'),
 ('Słupsk', 'Pomorskie', 'Polska', '76-200'),
+('Słupsk', 'Pomorskie', 'Polska', '76-200'),
+('Miastko', 'Pomorskie', 'Polska', '77-200'),
+('Słupsk', 'Pomorskie', 'Polska', '76-200'),
+('Kobylnica', 'Pomorskie', 'Polska', '76-252'),
+('Słupsk', 'Pomorskie', 'Polska', '76-200'),
+('Kobylnica','Pomorskie', 'Polska', '76-252'),
+('Dębnica Kaszubska', 'Pomorskie', 'Polska', '76-248'),
+('Redzikowo', 'Pomorskie', 'Polska', '76-250'),
+('Dębnica Kaszubska', 'Pomorskie', 'Polska', '76-248'),
+('Słupsk', 'Pomorskie', 'Polska', '76-200');
