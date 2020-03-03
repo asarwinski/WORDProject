@@ -11,6 +11,8 @@ namespace WORDProjectClassLib.Models
         public int Id { get; set; }
         public Examinee Examinee { get; set; }
         public Examiner Examiner { get; set; }
-
+        public DateTime Date { get; set; }
+        public bool? Result { get; set; }
+        public TimeSpan Duration { get; set; }
     }
 }

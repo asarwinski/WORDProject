@@ -57,6 +57,7 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="AddInitialValues" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ProjectDatabase.publish.xml" />
@@ -71,5 +72,8 @@
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ProjectDatabase.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="AddInitialValues\AddExaminees.sql" />
   </ItemGroup>
 </Project>

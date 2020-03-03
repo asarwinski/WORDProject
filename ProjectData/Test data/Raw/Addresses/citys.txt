@@ -1,19 +1,19 @@
-Słupsk 76-200 Pomorskie
-Miastko 77-200 Pomorskie
-Kobylnica 76-252 Pomorskie
-Dębnica Kaszubska 76-248 Pomorskie
-Redzikowo 76-250 Pomorskie
-Dretyń 77-203	Pomorskie
-Trzebielino 77-240 Pomorskie
-Ustka 76-270 Pomorskie
-Kwakowo 77-252 Pomorskie
-Kruszyna 76-251 Pomorskie
-Zieliń 77-235	Pomorskie
-Bożanka 77-204 Pomorskie
-Kołczygłowy 77-140 Pomorskie
-Kościerzyna 83-400 Pomorskie
-Bytów 77-100 Pomorskie
-Siemianice 76-216 Pomorskie
-Kępice 77-230 Pomorskie
-Katowice 40-000 Śląskie
-Warszawy 00-007 Mazowieckie
+Słupsk 76-200 Pomorskie 50
+Miastko 77-200 Pomorskie 10
+Kobylnica 76-252 Pomorskie 10
+Dębnica Kaszubska 76-248 Pomorskie 5
+Redzikowo 76-250 Pomorskie 10
+Dretyń 77-203 Pomorskie 2
+Trzebielino 77-240 Pomorskie 2
+Ustka 76-270 Pomorskie 2
+Kwakowo 77-252 Pomorskie 1
+Kruszyna 76-251 Pomorskie 1
+Zieliń 77-235 Pomorskie 1
+Bożanka 77-204 Pomorskie 1
+Kołczygłowy 77-140 Pomorskie 1
+Kościerzyna 83-400 Pomorskie 1
+Bytów 77-100 Pomorskie 5
+Siemianice 76-216 Pomorskie 5
+Kępice 77-230 Pomorskie 1
+Katowice 40-000 Śląskie 1
+Warszawy 00-007 Mazowieckie 1
