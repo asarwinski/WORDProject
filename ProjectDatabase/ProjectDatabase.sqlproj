@@ -58,12 +58,15 @@
     <Folder Include="Properties" />
     <Folder Include="Tables" />
     <Folder Include="InitialValues" />
+    <Folder Include="StoredProcedures" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ProjectDatabase.publish.xml" />
     <None Include="InitialValues\AddExaminees.sql" />
     <None Include="InitialValues\AddExaminers.sql" />
     <None Include="InitialValues\AddPermissions.sql" />
+    <None Include="InitialValues\AddExams.sql" />
+    <None Include="InitialValues\AddPlannedExams.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Examinees.sql" />
@@ -73,6 +76,11 @@
     <Build Include="Tables\Exams.sql" />
     <Build Include="Tables\Passwords.sql" />
     <None Include="InitialValues\AddAddresses.sql" />
+    <Build Include="StoredProcedures\GetExaminees.sql" />
+    <Build Include="StoredProcedures\GetExaminers.sql" />
+    <Build Include="StoredProcedures\GetExams.sql" />
+    <Build Include="StoredProcedures\GetExaminerById.sql" />
+    <Build Include="StoredProcedures\GetExamineeById.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ProjectDatabase.refactorlog" />

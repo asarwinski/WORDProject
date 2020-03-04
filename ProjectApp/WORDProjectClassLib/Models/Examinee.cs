@@ -14,5 +14,13 @@ namespace WORDProjectClassLib.Models
         public string Pesel { get; set; }
         public DateTime BirthDate { get; set; }
         public Address Address { get; set; }
+        public List<string> Categories { get; set; } = new List<string>();
+        public string CategoriesDisplay 
+        { 
+            get
+            {
+                return string.Join(" ", Categories);
+            }
+        }
     }
 }

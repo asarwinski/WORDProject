@@ -1,4 +1,4 @@
-Julian Dšbrowski
+Julian Dłbrowski
 Klementyna Lewandowska
 Bronisław Wójcik
 Radosław Czarnecki
@@ -17,13 +17,13 @@ Agata Mróz
 Balbina Czarnecka
 Balbina Czarnecka
 Klementyna Lewandowska
-Julian Dšbrowski
+Julian Dłbrowski
 Radosław Czarnecki
 Bronisław Wójcik
 Barbara Szewczyk
 Bronisław Wójcik
 Mirosław Urbański
-Julian Dšbrowski
+Julian Dłbrowski
 Bronisław Wójcik
 Korneliusz Laskowski
 Klementyna Lewandowska
@@ -39,7 +39,7 @@ Mirosław Urbański
 Barbara Szewczyk
 Bronisław Wójcik
 Bronisław Wójcik
-Julian Dšbrowski
+Julian Dłbrowski
 Balbina Czarnecka
 Bronisław Wójcik
 Mirosław Urbański
@@ -47,12 +47,12 @@ Bronisław Wójcik
 Mirosław Urbański
 Agata Mróz
 Barbara Szewczyk 
-Julian Dšbrowski
+Julian Dłbrowski
 Barbara Szewczyk 
-Julian Dšbrowski
+Julian Dłbrowski
 Balbina Czarnecka
-Julian Dšbrowski
-Julian Dšbrowski
+Julian Dłbrowski
+Julian Dłbrowski
 Klementyna Lewandowska
 Bronisław Wójcik
 Klementyna Lewandowska
@@ -68,8 +68,8 @@ Agata Mróz
 Agata Mróz
 Mirosław Urbański
 Agata Mróz
-Julian Dšbrowski
-Julian Dšbrowski
+Julian Dłbrowski
+Julian Dłbrowski
 Balbina Czarnecka
 Klementyna Lewandowska
 Klementyna Lewandowska
@@ -90,7 +90,7 @@ Edyta Wysocka
 Edyta Wysocka
 Klementyna Lewandowska
 Barbara Szewczyk
-Julian Dšbrowski
+Julian Dłbrowski
 Klementyna Lewandowska
 Balbina Czarnecka
 Balbina Czarnecka

@@ -9,11 +9,13 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
+DELETE FROM [dbo].[Exams]
 DELETE FROM [dbo].[Permissions]
 DELETE FROM [dbo].[Examiners]
 DELETE FROM [dbo].[Examinees]
 DELETE FROM [dbo].[Addresses]
 
+DBCC CHECKIDENT ('[dbo].[Exams]', RESEED, 0);
 DBCC CHECKIDENT ('[dbo].[Permissions]', RESEED, 0);
 DBCC CHECKIDENT ('[dbo].[Examiners]', RESEED, 0);
 DBCC CHECKIDENT ('[dbo].[Examinees]', RESEED, 0);
@@ -23,4 +25,5 @@ DBCC CHECKIDENT ('[dbo].[Addresses]', RESEED, 0);
 :r .\InitialValues\AddExaminees.sql
 :r .\InitialValues\AddExaminers.sql
 :r .\InitialValues\AddPermissions.sql
-
+:r .\InitialValues\AddExams.sql
+:r .\InitialValues\AddPlannedExams.sql
