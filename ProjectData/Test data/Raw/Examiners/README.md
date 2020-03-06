@@ -1,1 +1,1 @@
-Test DB of Examiners
+Folder z danymi egzaminatorów
