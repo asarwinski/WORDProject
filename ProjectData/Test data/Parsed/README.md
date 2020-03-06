@@ -1,1 +1,1 @@
-Folder z połączonych ze sobą danymi
+Folder danych połączonych ze sobą
