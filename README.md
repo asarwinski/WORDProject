@@ -10,3 +10,5 @@ By Adrian Sarwiński and Bartosz Górnowicz
   - ProjectApp - folder poświęcony aplikacji  
   - ProjectData - folder poświęcony danym
   - ProjectDatabase - folder poświęcony bazie danych
+  
+# Dokumentacja projektu znajduje się w folderze ProjectData
