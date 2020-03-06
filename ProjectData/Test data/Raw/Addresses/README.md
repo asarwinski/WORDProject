@@ -1,0 +1,1 @@
+Folder z danymi adresów

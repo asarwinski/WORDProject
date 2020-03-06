@@ -1,1 +1,1 @@
-Images to use in documentation
+Zdjęcia do użycia w projekcie

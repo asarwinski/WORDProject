@@ -1,1 +1,1 @@
-PDF sketches
+Szkice jak będzie wyglądał pdf

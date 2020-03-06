@@ -1,1 +1,1 @@
-Added folder for data Permissions
+Folder z danymi zezwoleń na prowadzenie egzaminów przez egzaminatorów
