@@ -1,1 +1,1 @@
-added folder for test data to future exams
+Folder z danymi planowanych egzaminów
