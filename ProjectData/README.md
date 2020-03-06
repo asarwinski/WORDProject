@@ -1,1 +1,1 @@
-# Folder to store all the data about the project
+# Folder mający w sobie wszystkie potrzebne dane do stworzenia projektu
