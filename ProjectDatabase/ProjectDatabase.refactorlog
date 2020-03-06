@@ -14,4 +14,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="[FK_Exams_ToExaminees]" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="043afcde-78de-4991-b9c7-91c7c9d8bd8d" ChangeDateTime="03/05/2020 21:35:41">
+    <Property Name="ElementName" Value="[dbo].[GetExams]" />
+    <Property Name="ElementType" Value="SqlProcedure" />
+    <Property Name="ParentElementName" Value="[dbo]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[GetFinishedExams]" />
+  </Operation>
 </Operations>

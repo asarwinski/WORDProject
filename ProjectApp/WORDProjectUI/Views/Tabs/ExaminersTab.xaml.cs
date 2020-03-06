@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using WORDProjectUI.ViewModels;
 
 namespace WORDProjectUI.Views.Tabs
 {
@@ -24,21 +25,7 @@ namespace WORDProjectUI.Views.Tabs
         public ExaminersTab()
         {
             InitializeComponent();
-            Loaded += new RoutedEventHandler(BirthDateFilter_Loaded);
-        }
-
-        private void BirthDateFilter_DisplayModeChanged(object sender, CalendarModeChangedEventArgs e)
-        {
-            if (!e.NewMode.Equals(CalendarMode.Year))
-            {
-                BirthDateFilter.DisplayMode = CalendarMode.Year;
-            }
-        }
-
-        private void BirthDateFilter_Loaded(object sender, RoutedEventArgs e)
-        {
-            BirthDateFilter.DisplayMode = CalendarMode.Month;
-            BirthDateFilter.DisplayMode = CalendarMode.Year;
+            DataContext = new ExaminersTabViewModel();
         }
     }
 }

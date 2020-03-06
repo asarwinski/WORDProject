@@ -1,37 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WORDProjectUI.Utils;
-using WORDProjectClassLib.Models;
 using WORDProjectClassLib.DB;
-using System.Collections.ObjectModel;
+using WORDProjectClassLib.Models;
+using WORDProjectUI.Utils;
 
 namespace WORDProjectUI.ViewModels
 {
-    public class ExamineesTabViewModel : ViewModel
+    public class ExaminersTabViewModel : ViewModel
     {
 		private IDataAccess db;
 
-		private ObservableCollection<Examinee> filteredExaminees;
-		public ObservableCollection<Examinee> FilteredExaminees
+		private ObservableCollection<Examiner> filteredExaminers;
+		public ObservableCollection<Examiner> FilteredExaminers
 		{
-			get { return filteredExaminees; }
-			set 
+			get { return filteredExaminers; }
+			set
 			{
-				filteredExaminees = value;
+				filteredExaminers = value;
 				OnPropertyChanged();
 			}
 		}
 
-		private ObservableCollection<Examinee> examinees;
-		public ObservableCollection<Examinee> Examinees
+		private ObservableCollection<Examiner> examiners;
+		public ObservableCollection<Examiner> Examiners
 		{
-			get { return examinees; }
-			set 
+			get { return examiners; }
+			set
 			{
-				examinees = value;
+				examiners = value;
 				OnPropertyChanged();
 				OnPropertyChanged("Names");
 				OnPropertyChanged("Surnames");
@@ -44,7 +44,7 @@ namespace WORDProjectUI.ViewModels
 		{
 			get
 			{
-				var names = Examinees.Select(x => x.Name).Distinct().ToList();
+				var names = Examiners.Select(x => x.Name).Distinct().ToList();
 				names.Sort();
 				var names_oc = new ObservableCollection<string>(names);
 				names_oc.Insert(0, null);
@@ -55,7 +55,7 @@ namespace WORDProjectUI.ViewModels
 		{
 			get
 			{
-				var surnames = Examinees.Select(x => x.Surname).Distinct();
+				var surnames = Examiners.Select(x => x.Surname).Distinct();
 				return new ObservableCollection<string>(surnames);
 			}
 		}
@@ -63,7 +63,7 @@ namespace WORDProjectUI.ViewModels
 		{
 			get
 			{
-				var categories = Examinees.Select(x => x.Categories).SelectMany(x => x).Distinct();
+				var categories = Examiners.Select(x => x.Permissions).SelectMany(x => x).Distinct();
 				return new ObservableCollection<string>(categories);
 			}
 		}
@@ -71,7 +71,7 @@ namespace WORDProjectUI.ViewModels
 		{
 			get
 			{
-				var cities = Examinees.Select(x => x.Address.City).Distinct();
+				var cities = Examiners.Select(x => x.Address.City).Distinct();
 				return new ObservableCollection<string>(cities);
 			}
 		}
@@ -82,8 +82,8 @@ namespace WORDProjectUI.ViewModels
 		public string Name
 		{
 			get { return name; }
-			set 
-			{ 
+			set
+			{
 				name = value;
 				OnPropertyChanged();
 			}
@@ -93,8 +93,8 @@ namespace WORDProjectUI.ViewModels
 		public string Surname
 		{
 			get { return surname; }
-			set 
-			{ 
+			set
+			{
 				surname = value;
 				OnPropertyChanged();
 			}
@@ -104,8 +104,8 @@ namespace WORDProjectUI.ViewModels
 		public string Categorie
 		{
 			get { return categorie; }
-			set 
-			{ 
+			set
+			{
 				categorie = value;
 				OnPropertyChanged();
 			}
@@ -115,8 +115,8 @@ namespace WORDProjectUI.ViewModels
 		public string City
 		{
 			get { return city; }
-			set 
-			{ 
+			set
+			{
 				city = value;
 				OnPropertyChanged();
 			}
@@ -126,7 +126,7 @@ namespace WORDProjectUI.ViewModels
 		public int BirthMonth
 		{
 			get { return birthMonth; }
-			set 
+			set
 			{
 				birthMonth = value;
 				OnPropertyChanged();
@@ -138,8 +138,8 @@ namespace WORDProjectUI.ViewModels
 		private async void executeSearch(object obj)
 		{
 			DateTime? date = BirthMonth == 0 ? null : new DateTime?(new DateTime(2020, BirthMonth, 1));
-			var result = await db.GetExaminees(Name, Surname, Categorie, City, date);
-			FilteredExaminees = new ObservableCollection<Examinee>(result);
+			var result = await db.GetExaminers(Name, Surname, Categorie, City, date);
+			FilteredExaminers = new ObservableCollection<Examiner>(result);
 		}
 
 		public Command Clear { get; set; }
@@ -153,20 +153,20 @@ namespace WORDProjectUI.ViewModels
 			executeSearch(null);
 		}
 
-		public ExamineesTabViewModel()
+		public ExaminersTabViewModel()
 		{
 			db = new DataBase(ConnectionStringHelper.GetConnectionString(DBType.Local));
-			Examinees = new ObservableCollection<Examinee>();
-			InitializeExaminees();
+			Examiners = new ObservableCollection<Examiner>();
+			InitializeExaminers();
 			Search = new Command(executeSearch);
 			Clear = new Command(executeClear);
 		}
 
-		private async void InitializeExaminees()
+		private async void InitializeExaminers()
 		{
-			var data = await db.GetExaminees();
-			FilteredExaminees = new ObservableCollection<Examinee>(data);
-			Examinees = new ObservableCollection<Examinee>(data);
+			var data = await db.GetExaminers();
+			FilteredExaminers = new ObservableCollection<Examiner>(data);
+			Examiners = new ObservableCollection<Examiner>(data);
 		}
 	}
 }

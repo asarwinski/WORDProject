@@ -67,6 +67,7 @@
     <None Include="InitialValues\AddPermissions.sql" />
     <None Include="InitialValues\AddExams.sql" />
     <None Include="InitialValues\AddPlannedExams.sql" />
+    <None Include="InitialValues\AddPassword.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Examinees.sql" />
@@ -78,9 +79,17 @@
     <None Include="InitialValues\AddAddresses.sql" />
     <Build Include="StoredProcedures\GetExaminees.sql" />
     <Build Include="StoredProcedures\GetExaminers.sql" />
-    <Build Include="StoredProcedures\GetExams.sql" />
+    <Build Include="StoredProcedures\GetFinishedExams.sql" />
     <Build Include="StoredProcedures\GetExaminerById.sql" />
     <Build Include="StoredProcedures\GetExamineeById.sql" />
+    <Build Include="StoredProcedures\GetFutureExams.sql" />
+    <Build Include="StoredProcedures\AddExaminer.sql" />
+    <Build Include="StoredProcedures\AddAddress.sql" />
+    <Build Include="StoredProcedures\AddExaminee.sql" />
+    <Build Include="StoredProcedures\AddCategory.sql" />
+    <Build Include="StoredProcedures\DoesExamineeExist.sql" />
+    <Build Include="StoredProcedures\AddExam.sql" />
+    <Build Include="StoredProcedures\CheckPassword.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ProjectDatabase.refactorlog" />

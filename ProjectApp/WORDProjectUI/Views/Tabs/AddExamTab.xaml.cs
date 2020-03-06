@@ -17,14 +17,14 @@ using WORDProjectUI.ViewModels;
 namespace WORDProjectUI.Views.Tabs
 {
     /// <summary>
-    /// Interaction logic for PlannedExamsTab.xaml
+    /// Interaction logic for AddExamTab.xaml
     /// </summary>
-    public partial class PlannedExamsTab : UserControl
+    public partial class AddExamTab : UserControl
     {
-        public PlannedExamsTab()
+        public AddExamTab()
         {
             InitializeComponent();
-            DataContext = new PlannedExamsTabViewModel();
+            DataContext = new AddExamTabViewModel();
         }
     }
 }

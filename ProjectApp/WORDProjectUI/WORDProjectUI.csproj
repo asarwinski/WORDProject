@@ -59,10 +59,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Utils\Command.cs" />
     <Compile Include="Utils\ConnectionStringHelper.cs" />
+    <Compile Include="ViewModels\Tabs\AddExaminersTabViewModel.cs" />
+    <Compile Include="ViewModels\Tabs\AddExamTabViewModel.cs" />
     <Compile Include="ViewModels\Tabs\ExamineesTabViewModel.cs" />
+    <Compile Include="ViewModels\Tabs\ExaminersTabViewModel.cs" />
+    <Compile Include="ViewModels\Tabs\ExamsHistoryTabViewModel.cs" />
+    <Compile Include="ViewModels\Tabs\PlannedExamsTabViewModel.cs" />
     <Compile Include="Views\Tabs\AddExaminersTab.xaml.cs">
       <DependentUpon>AddExaminersTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabs\AddExamTab.xaml.cs">
+      <DependentUpon>AddExamTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabs\CreatePdfTab.xaml.cs">
+      <DependentUpon>CreatePdfTab.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Tabs\ExamineesTab.xaml.cs">
       <DependentUpon>ExamineesTab.xaml</DependentUpon>
@@ -111,7 +123,6 @@
     <Compile Include="Utils\LoginPageFilledConverter.cs" />
     <Compile Include="Utils\ViewModel.cs" />
     <Compile Include="Utils\VisibilityToBoolConverter.cs" />
-    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
@@ -121,6 +132,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\Tabs\AddExaminersTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Tabs\AddExamTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Tabs\CreatePdfTab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

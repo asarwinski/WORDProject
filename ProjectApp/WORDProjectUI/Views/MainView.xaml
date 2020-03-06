@@ -54,13 +54,13 @@
                 <TabItem.Header>
                     <Image Width="50" Source="/Images/add.png"/>
                 </TabItem.Header>
-                <Grid Background="#FF7A7A7A"/>
+                <tabs:AddExamTab Background="{StaticResource TabBG}"/>
             </TabItem>
             <TabItem x:Name="GeneratePdf">
                 <TabItem.Header>
                     <Image Width="50" Source="/Images/pdf.png"/>
                 </TabItem.Header>
-                <Grid Background="#FF7A7A7A"/>
+                <tabs:CreatePdfTab Background="{StaticResource TabBG}"/>
             </TabItem>
         </TabControl>
     </Grid>

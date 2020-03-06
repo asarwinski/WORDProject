@@ -25,21 +25,6 @@ namespace WORDProjectUI.Views.Tabs
         {
             InitializeComponent();
             DataContext = new ExamineesTabViewModel();
-            Loaded += ExamineesTab_Loaded;
-        }
-
-        private void ExamineesTab_Loaded(object sender, RoutedEventArgs e)
-        {
-            BirthDateFilter.DisplayMode = CalendarMode.Month;
-            BirthDateFilter.DisplayMode = CalendarMode.Year;
-        }
-
-        private void BirthDateFilter_DisplayModeChanged(object sender, CalendarModeChangedEventArgs e)
-        {
-            if (!e.NewMode.Equals(CalendarMode.Year))
-            {
-                BirthDateFilter.DisplayMode = CalendarMode.Year;
-            }
         }
     }
 }

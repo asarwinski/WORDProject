@@ -16,14 +16,44 @@ namespace WORDProjectClassLib.DB
         {
             ConnectionString = connectionString;
         }
-        public void AddExaminee(Examinee examinee)
+
+        public void AddExam(Exam exam)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionString))
+            {
+                string sql = "dbo.DoesExamineeExist @Pesel";
+                int? examinee_id = connection.Query<int?>(sql, new { Pesel = exam.Examinee.Pesel }).FirstOrDefault();
+                if (examinee_id == null)
+                {
+                    sql = "dbo.AddAddress @City, @State, @Country, @Zipcode";
+                    int address_id = connection.Query<int>(sql, exam.Examinee.Address).Single();
+                    sql = "dbo.AddExaminee @Name, @Surname, @Pesel, @BirthDate, @Address_Id";
+                    var p = new { Name = exam.Examinee.Name, Surname = exam.Examinee.Surname, Pesel = exam.Examinee.Pesel, BirthDate = exam.Examinee.BirthDate, address_id };
+                    examinee_id = connection.Query<int?>(sql, p).Single();
+                }
+                sql = "dbo.AddExam @Examinee_Id, @Examiner_Id, @Category, @Date";
+                var e = new { Examinee_id = examinee_id, Examiner_Id = exam.Examiner.Id, Category = exam.Category, Date = exam.Date };
+                connection.Execute(sql, e);
+            }
         }
 
         public void AddExaminer(Examiner examiner)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionString))
+            {
+                string sql = "dbo.AddAddress @City, @State, @Country, @Zipcode";
+                int address_id = connection.Query<int>(sql, examiner.Address).Single();
+
+                sql = "dbo.AddExaminer @Name, @Surname, @Pesel, @BirthDate, @Address_Id";
+                var e = new { Name = examiner.Name, Surname = examiner.Surname, Pesel = examiner.Pesel, BirthDate = examiner.BirthDate, Address_Id = address_id };
+                int examiner_id = connection.Query<int>(sql, e).Single();
+                foreach (string category in examiner.Permissions)
+                {
+                    sql = "dbo.AddCategory @Examiner_Id, @Category";
+                    var p = new { Examiner_Id = examiner_id, Category = category };
+                    connection.Execute(sql, p);
+                }
+            }
         }
 
         public async Task<List<Examinee>> GetExaminees(string name = null, string surname = null, string category = null, string city = null, DateTime? birthDate = null)
@@ -105,7 +135,7 @@ namespace WORDProjectClassLib.DB
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionString))
             {
-                string sql = "dbo.GetExaminerById @Id";
+                string sql = "dbo.GetExamineeById @Id";
                 var p = new { Id = id };
                 var reslut = connection.Query<Examinee, Address, string, Examinee>(sql,
                     (e, address, c) =>
@@ -126,22 +156,59 @@ namespace WORDProjectClassLib.DB
             }
         }
 
-        public async Task<List<Exam>> GetExams(Examiner examiner = null, Examinee examinee = null, string category = null, DateTime? date = null, bool? result = null)
+        public async Task<List<Exam>> GetFinishedExams(Examiner examiner = null, Examinee examinee = null, string category = null, DateTime? date = null, bool? result = null)
         {
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionString))
             {
-                string sql = "dbo.GetExams @Examiner_Id, @Examinee_Id, @Category, @Date, @Result";
-                var p = new { Examiner_Id = examiner.Id, Examinee_Id = examinee.Id, Category = category, Date = date, Result = result };
+                string sql = "dbo.GetFinishedExams @Examiner_Id, @Examinee_Id, @Category, @Date, @Result";
+                int? examiner_id = examiner == null ? null : (int?)examiner.Id;
+                int? examinee_id = examinee == null ? null : (int?)examinee.Id;
+                var p = new { Examiner_Id = examiner_id, Examinee_Id = examinee_id, Category = category, Date = date, Result = result };
                 var exams = await connection.QueryAsync<Exam, int, int, Exam>(sql,
-                    (exam, examinee_id, examiner_id) =>
+                    (exam, ee_id, er_id) =>
                     {
-                        var x = GetExamineeById(examinee_id);
-                        var y = GetExaminerById(examiner_id);
+                        var x = GetExamineeById(ee_id);
+                        var y = GetExaminerById(er_id);
                         exam.Examinee = x;
                         exam.Examiner = y;
                         return exam;
-                    });
+                    },
+                    param: p,
+                    splitOn: "Examinee_Id, Examiner_Id");
                 return exams.ToList();
+            }
+        }
+
+        public async Task<List<Exam>> GetFutureExams(Examiner examiner = null, Examinee examinee = null, string category = null, DateTime? date = null)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionString))
+            {
+                string sql = "dbo.GetFutureExams @Examiner_Id, @Examinee_Id, @Category, @Date";
+                int? examiner_id = examiner == null ? null : (int?)examiner.Id;
+                int? examinee_id = examinee == null ? null : (int?)examinee.Id;
+                var p = new { Examiner_Id = examiner_id, Examinee_Id = examinee_id, Category = category, Date = date };
+                var exams = await connection.QueryAsync<Exam, int, int, Exam>(sql,
+                    (exam, ee_id, er_id) =>
+                    {
+                        var x = GetExamineeById(ee_id);
+                        var y = GetExaminerById(er_id);
+                        exam.Examinee = x;
+                        exam.Examiner = y;
+                        return exam;
+                    }, 
+                    param: p,
+                    splitOn: "Examinee_Id, Examiner_Id");
+                return exams.ToList();
+            }
+        }
+
+        public bool CheckPassword(string login, string password)
+        {
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(ConnectionString))
+            {
+                string sql = "dbo.CheckPassword @Login, @Password";
+                var p = new { Login = login, Password = password };
+                return connection.Query<int>(sql, p).Single() > 0;
             }
         }
     }
