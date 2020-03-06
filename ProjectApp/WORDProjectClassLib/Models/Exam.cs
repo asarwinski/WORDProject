@@ -14,6 +14,13 @@ namespace WORDProjectClassLib.Models
         public string Category { get; set; }
         public DateTime Date { get; set; }
         public bool? Result { get; set; }
+        public string ResultDisplay
+        {
+            get
+            {
+                return (bool)Result ? "Pozytywny" : "Negatywny";
+            }
+        }
         public TimeSpan Duration { get; set; }
     }
 }

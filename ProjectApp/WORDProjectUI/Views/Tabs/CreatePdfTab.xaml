@@ -25,9 +25,9 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Text="Create PDF" FontSize="40" Margin="0,40"/>
+        <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="1" Text="Stwórz PDF" FontSize="40" Margin="0,40"/>
 
-        <TextBlock Grid.Column="2" Grid.Row="2" Text="Category:"/>
+        <TextBlock Grid.Column="2" Grid.Row="2" Text="Kategoria:"/>
         <ComboBox Grid.Column="3" Grid.Row="2" SelectedValue="{Binding Category}" SelectedValuePath="Content">
             <ComboBoxItem/>
             <ComboBoxItem Content="C+E"/>

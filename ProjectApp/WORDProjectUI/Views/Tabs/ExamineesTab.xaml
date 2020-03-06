@@ -29,11 +29,11 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="Name:"/>
-        <TextBlock Grid.Column="1" Grid.Row="3" Text="Surname:" Margin="0"/>
-        <TextBlock Grid.Column="1" Grid.Row="5" Text="Category:" Margin="0"/>
-        <TextBlock Grid.Column="1" Grid.Row="7" Text="City:" Margin="0"/>
-        <TextBlock Grid.Column="1" Grid.Row="9" Text="Bitrh Month:" Margin="0"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="Imie:"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" Text="Nazwisko:" Margin="0"/>
+        <TextBlock Grid.Column="1" Grid.Row="5" Text="Kategoria:" Margin="0"/>
+        <TextBlock Grid.Column="1" Grid.Row="7" Text="Miasto:" Margin="0"/>
+        <TextBlock Grid.Column="1" Grid.Row="9" Text="Miesiąc urodzenia:" Margin="0"/>
         <ComboBox x:Name="NameFilter" Grid.Column="1" Grid.Row="2" Margin="0, 2" MinWidth="100" 
                   ItemsSource="{Binding Names}"
                   SelectedValue="{Binding Name}"/>
@@ -74,12 +74,12 @@
         <DataGrid Grid.Column="2" Grid.Row="1" Grid.RowSpan="12" x:Name="ExaminersDataGrid" AutoGenerateColumns="False" Margin="10,0,0,0"
                   ItemsSource="{Binding FilteredExaminees}" AlternatingRowBackground="#FFC3C3C3" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="1*"/>
-                <DataGridTextColumn Header="Surname"  Binding="{Binding Surname}" Width="1*"/>
+                <DataGridTextColumn Header="Imie" Binding="{Binding Name}" Width="1*"/>
+                <DataGridTextColumn Header="Nazwisko"  Binding="{Binding Surname}" Width="1*"/>
                 <DataGridTextColumn Header="Pesel"  Binding="{Binding Pesel}" Width="2*"/>
-                <DataGridTextColumn Header="Birth Date"  Binding="{Binding BirthDate, StringFormat=yyyy-MM-dd}" Width="1*"/>
-                <DataGridTextColumn Header="Address" Binding="{Binding Address.City}" Width="2*"/>
-                <DataGridTextColumn Header="Categories" Binding="{Binding CategoriesDisplay}" Width="1*"/>
+                <DataGridTextColumn Header="Data urodzenia"  Binding="{Binding BirthDate, StringFormat=yyyy-MM-dd}" Width="1*"/>
+                <DataGridTextColumn Header="Adres" Binding="{Binding Address.City}" Width="2*"/>
+                <DataGridTextColumn Header="Kategorie" Binding="{Binding CategoriesDisplay}" Width="1*"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

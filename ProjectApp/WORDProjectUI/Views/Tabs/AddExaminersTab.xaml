@@ -32,21 +32,21 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="2" Grid.ColumnSpan="5" Grid.Row="1" Text="Add Examiner" HorizontalAlignment="Center" FontSize="40"/>
+        <TextBlock Grid.Column="2" Grid.ColumnSpan="5" Grid.Row="1" Text="Dodaj Egzaminatora" HorizontalAlignment="Center" FontSize="40"/>
         
         
-        <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3" Text="Personal Details" FontSize="20" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3" Text="Dane osobiste" FontSize="20" HorizontalAlignment="Center"/>
         
-        <TextBlock Grid.Column="2" Grid.Row="4" Text="Name:" Margin="0,5"/>
+        <TextBlock Grid.Column="2" Grid.Row="4" Text="Imie:" Margin="0,5"/>
         <TextBox x:Name="ExaminerName" Text="{Binding Name}" Grid.Column="3" Grid.Row="4" MinWidth="115" Margin="0,5"/>
         
-        <TextBlock Grid.Column="2" Grid.Row="5" Text="Surname:" Margin="0,5"/>
+        <TextBlock Grid.Column="2" Grid.Row="5" Text="Nazwisko:" Margin="0,5"/>
         <TextBox x:Name="ExaminerSurname" Text="{Binding Surname}" Grid.Column="3" Grid.Row="5" MinWidth="115" Margin="0,5"/>
         
         <TextBlock Grid.Column="2" Grid.Row="6" Text="Pesel:" Margin="0,5"/>
         <TextBox x:Name="ExaminerPesel" Text="{Binding Pesel}" Grid.Column="3" Grid.Row="6" MinWidth="115" Margin="0,5"/>
         
-        <TextBlock Grid.Column="2" Grid.Row="7" Text="BirthDate:" Margin="0,5"/>
+        <TextBlock Grid.Column="2" Grid.Row="7" Text="Data urodzenia:" Margin="0,5"/>
         <DatePicker x:Name="ExaminerBirthDate" SelectedDate="{Binding BirthDate}" Grid.Column="3" Grid.Row="7" Margin="5,5" BorderBrush="{x:Null}"/>
         
         
@@ -57,21 +57,21 @@
         </Path>
 
 
-        <TextBlock Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="3" Text="Address Details" FontSize="20" HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="5" Grid.ColumnSpan="2" Grid.Row="3" Text="Dane zamieszkania" FontSize="20" HorizontalAlignment="Center"/>
         
-        <TextBlock Grid.Column="5" Grid.Row="4" Text="City:" Margin="0,5"/>
+        <TextBlock Grid.Column="5" Grid.Row="4" Text="Miasto:" Margin="0,5"/>
         <TextBox x:Name="ExaminerCity" Text="{Binding City}" Grid.Column="6" Grid.Row="4" MinWidth="115" Margin="0,5"/>
 
-        <TextBlock Grid.Column="5" Grid.Row="5" Text="State:" Margin="0,5"/>
+        <TextBlock Grid.Column="5" Grid.Row="5" Text="Województwo:" Margin="0,5"/>
         <TextBox x:Name="ExaminerState" Text="{Binding State}" Grid.Column="6" Grid.Row="5" MinWidth="115" Margin="0,5"/>
 
-        <TextBlock Grid.Column="5" Grid.Row="6" Text="Zip Code:" Margin="0,5"/>
+        <TextBlock Grid.Column="5" Grid.Row="6" Text="Kod pocztowy:" Margin="0,5"/>
         <TextBox x:Name="ExaminerZipCode" Text="{Binding Zipcode}" Grid.Column="6" Grid.Row="6" MinWidth="115" Margin="0,5"/>
 
-        <TextBlock Grid.Column="5" Grid.Row="7" Text="Country:" Margin="0,5"/>
+        <TextBlock Grid.Column="5" Grid.Row="7" Text="Kraj:" Margin="0,5"/>
         <TextBox x:Name="ExaminerCountry" Text="{Binding Country}" Grid.Column="6" Grid.Row="7" MinWidth="115" Margin="0,5"/>
 
-        <TextBlock Grid.Column="2" Grid.Row="8" Text="Category:" Margin="0,5"/>
+        <TextBlock Grid.Column="2" Grid.Row="8" Text="Kategoria:" Margin="0,5"/>
         <ComboBox x:Name="Category" Grid.Column="3" Grid.Row="8" MinWidth="115" Margin="0,5"
                   SelectedValuePath="Content"
                   SelectedValue="{Binding Category}">
