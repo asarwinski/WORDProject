@@ -1,1 +1,3 @@
-Dane : Parsed - skompresowane dane; Raw - dane poszczególnych tabel.
+Dane :  
+- Parsed- skompresowane dane;  
+- Raw - dane poszczególnych tabel.
