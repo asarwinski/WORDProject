@@ -1,1 +1,1 @@
-added exams test data
+Folder z danymi egzaminów
