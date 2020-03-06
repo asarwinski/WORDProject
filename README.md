@@ -11,4 +11,4 @@ By Adrian Sarwiński and Bartosz Górnowicz
   - ProjectData - folder poświęcony danym
   - ProjectDatabase - folder poświęcony bazie danych
   
-# Dokumentacja projektu znajduje się w folderze ProjectData
+Dokumentacja projektu znajduje się w folderze ProjectData
