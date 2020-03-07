@@ -1,0 +1,4 @@
+1. Użyć funkcji Publish w VisualStudio, aby opublikować bazę danych
+2. Hasło do aplikaci:
+  login: admin
+  hasło: admin
