@@ -23,8 +23,14 @@ namespace WORDProjectClassLib.Pdf
 
             System.Drawing.ImageConverter converter = new System.Drawing.ImageConverter();
             var bytes = (byte[])converter.ConvertTo(Properties.Resources.wordLogo, typeof(byte[]));
+            Paragraph p = new Paragraph();
             Image logo = new Image(ImageDataFactory.Create(bytes));
-            document.Add(logo);
+            p.Add(logo);
+            p.Add(new Tab());
+            p.AddTabStops(new TabStop(1000, TabAlignment.RIGHT));
+            p.Add(DateTime.Now.ToString("MM/dd/yyyy"));
+
+            document.Add(p);
 
             var table = new Table(new float[] { 2, 2, 1, 2, 2, 1 });
             table.SetWidth(UnitValue.CreatePercentValue(100));
