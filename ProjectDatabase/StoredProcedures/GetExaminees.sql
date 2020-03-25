@@ -17,4 +17,4 @@ AS
 	  AND (examinee.Surname = @Surname or @Surname is null)
 	  AND (Month(examinee.BirthDate) = Month(@BirthDate) or @BirthDate is null)
 	  AND (address.City = @City or @City is null)
-	  AND (examinee.Id = ANY(SELECT Examinee_Id FROM [dbo].Exams WHERE Category = @Category AND Result = 'True'))
+	  AND (examinee.Id = ANY(SELECT Examinee_Id FROM [dbo].Exams WHERE Category = @Category AND Result = 'True') or @Category is null)
