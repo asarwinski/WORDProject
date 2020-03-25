@@ -17,4 +17,4 @@ AS
 	  AND (examiner.Surname = @Surname or @Surname is null)
 	  AND (Month(examiner.BirthDate) = Month(@BirthDate) or @BirthDate is null)
 	  AND (address.City = @City or @City is null)
-	  AND (permision.Category = @Category or @Category is null)
+	  AND (examiner.Id = ANY(SELECT Examiner_Id FROM [dbo].[Permissions] WHERE Category = @Category) or @Category is null)
