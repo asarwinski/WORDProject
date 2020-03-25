@@ -1,0 +1,15 @@
+Aby uruchomić aplikacje, należy uruchomić projekt WORDPropjectUI przy użyciu VisualStudio.
+Login: admin
+Hasło: admin
+
+Wszytskie pliki związane z apliacją znajdują się w folderze ProjectApp.
+Wszytskie pliki związane z bazą danych znajdują się w folderze ProjectDatebase.
+Aby sprawdzić strukturę bazy danych może Pan otwierać pliki z rozszerzeniem .sql lub 
+połączyć się z bazą danych na moim laptopie przy użyciu programu Microsoft SQL Server Management Studio.
+
+Server name: adriansql.ddns.net, 1433
+Authentication: SQL Server Authentication
+Login: admin
+Password: admin
+
+Dokumentacja znajduje się w pliku o nazwie Dokumentacja.docx w folderze ProjectData
