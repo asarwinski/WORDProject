@@ -155,7 +155,7 @@ namespace WORDProjectUI.ViewModels
 
 		public ExaminersTabViewModel()
 		{
-			db = new DataBase(ConnectionStringHelper.GetConnectionString(DBType.Local));
+			db = new DataBase(ConnectionStringHelper.GetConnectionString(DBType.Internet));
 			Examiners = new ObservableCollection<Examiner>();
 			InitializeExaminers();
 			Search = new Command(executeSearch);

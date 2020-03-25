@@ -51,7 +51,7 @@ namespace WORDProjectUI.Views.Tabs
         public CreatePdfTab()
         {
             InitializeComponent();
-            db = new DataBase(ConnectionStringHelper.GetConnectionString(DBType.Local));
+            db = new DataBase(ConnectionStringHelper.GetConnectionString(DBType.Internet));
             DataContext = this;
         }
 

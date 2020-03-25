@@ -152,7 +152,7 @@ namespace WORDProjectUI.ViewModels
 
 		public AddExaminersTabViewModel()
 		{
-			db = new DataBase(ConnectionStringHelper.GetConnectionString(DBType.Local));
+			db = new DataBase(ConnectionStringHelper.GetConnectionString(DBType.Internet));
 			Add = new Command(executeAdd, canExecuteAdd);
 		}
 	}

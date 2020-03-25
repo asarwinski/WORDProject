@@ -63,7 +63,7 @@ namespace WORDProjectUI.Views
         {
             InitializeComponent();
             DataContext = this;
-            db = new DataBase(ConnectionStringHelper.GetConnectionString(DBType.Local));
+            db = new DataBase(ConnectionStringHelper.GetConnectionString(DBType.Internet));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -74,19 +74,26 @@ namespace WORDProjectUI.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            bool result = db.CheckPassword(Login, Password);
-            if (result)
+            try
             {
-                var main = new MainWindow();
-                this.Hide();
-                main.Show();
-                this.Close();
+                bool result = db.CheckPassword(Login, Password);
+                if (result)
+                {
+                    var main = new MainWindow();
+                    this.Hide();
+                    main.Show();
+                    this.Close();
+                }
+                else
+                {
+                    Login = null;
+                    Password = null;
+                    WrongPassword.Visibility = Visibility.Visible;
+                }
             }
-            else
+            catch
             {
-                Login = null;
-                Password = null;
-                WrongPassword.Visibility = Visibility.Visible;
+                MessageBox.Show("Błąd połączenia z serverem SQL.");
             }
         }
     }

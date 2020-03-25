@@ -163,7 +163,7 @@ namespace WORDProjectUI.ViewModels
 
 		public ExamsHistoryTabViewModel()
 		{
-			db = new DataBase(ConnectionStringHelper.GetConnectionString(DBType.Local));
+			db = new DataBase(ConnectionStringHelper.GetConnectionString(DBType.Internet));
 			FilteredExams = new ObservableCollection<Exam>();
 			Exams = new ObservableCollection<Exam>();
 			InitializeExams();

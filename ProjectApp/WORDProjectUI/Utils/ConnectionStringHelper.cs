@@ -11,8 +11,9 @@ namespace WORDProjectUI.Utils
     {
         private static Dictionary<DBType, string> dbNames = new Dictionary<DBType, string>()
         {
-            {DBType.Local, "Local" },
-            {DBType.Docker, "Docker" }
+            {DBType.Local, "Internet" },
+            {DBType.Docker, "Docker" },
+            {DBType.Internet, "Internet" }
         };
         public static string GetConnectionString(DBType dbType)
         {
@@ -24,6 +25,7 @@ namespace WORDProjectUI.Utils
     public enum DBType
     {
         Local = 1,
-        Docker = 2
+        Docker = 2,
+        Internet = 3
     }
 }

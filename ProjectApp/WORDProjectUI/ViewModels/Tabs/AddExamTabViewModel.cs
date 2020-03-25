@@ -196,7 +196,7 @@ namespace WORDProjectUI.ViewModels
 		public AddExamTabViewModel()
 		{
 			Examiners = new ObservableCollection<Examiner>();
-			db = new DataBase(ConnectionStringHelper.GetConnectionString(DBType.Local));
+			db = new DataBase(ConnectionStringHelper.GetConnectionString(DBType.Internet));
 			Add = new Command(executeAdd, canExecuteAdd);
 			InitilizeExaminers();
 		}
